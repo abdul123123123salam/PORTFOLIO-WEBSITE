@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+    <!-- =====BOX ICONS===== -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Styles for social media icons and hover effects */
+        .social-icon {
+            display: inline-block;
+            margin: 10px;
+            color: white;
+            border-radius: 8px;
+            /* Square with rounded corners */
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            /* Vertically center icon */
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            /* Smooth transition for hover effects including background-color */
+        }
+
+        .social-icon i {
+            font-size: 30px;
+            /* Size of the Font Awesome icon */
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            /* Lift effect on hover */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+            /* Enhanced shadow on hover */
+            background-color: grey !important;
+            /* Change background to grey on hover */
+        }
+
+
+        /* Specific background colors for each social icon */
+        .social-icon.linkedin {
+            background-color: #0077B5;
+        }
+
+        .social-icon.github {
+            background-color: #333;
+        }
+
+        .social-icon.facebook {
+            background-color: #1877F2;
+        }
+
+        .social-icon.twitter {
+            background-color: #1DA1F2;
+        }
+
+        .social-icon.telegram {
+            background-color: #0088CC;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.0.7/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js">
+    <title>Portfolio website complete</title>
+</head>
+<!-- background-image: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%); -->
+
+<body style="background-image: linear-gradient(140deg, #cfcac9 0%, #aa1b1b 50%, #2b0b19 75%);">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!--===== HEADER =====-->
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo">ABDULSALAM</a>
+            </div>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+
+                    <li class="nav__item"><a href="#section2" class="nav__link"
+                            onclick="scrollToSection(event, 'section2')">Projects</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Certificates</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </header>
+
+    <main class="l-main">
+        <!--===== HOME =====-->
+        <section class="home bd-grid" id="home">
+            <div class="home__data">
+                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">ABDULSALAM</span><br> </h1>
+                <h1 class="home__title">
+                    <span class="home__title">Web Developer,<br>Data Scientist</span>
+                </h1>
+                <div style="max-width: 600px; padding: 50px; text-align: left;">
+
+                    <!-- LinkedIn Account -->
+                    <a href="https://www.linkedin.com/in/abdul-salam-125379269/" target="_blank"
+                        aria-label="LinkedIn Profile" class="social-icon linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <!-- GitHub Account -->
+                    <a href="https://github.com/abdul123123123salam" target="_blank" aria-label="GitHub Profile"
+                        class="social-icon github">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <!-- Facebook Account -->
+                    <a href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook Profile"
+                        class="social-icon facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <!-- Twitter Account -->
+                    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="Twitter Profile"
+                        class="social-icon twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <!-- Telegram Account -->
+                    <a href="https://t.me/yourprofile" target="_blank" aria-label="Telegram Profile"
+                        class="social-icon telegram">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="home__img" style="text-align: end;">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <mask id="mask0" mask-type="alpha">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                    </mask>
+                    <g mask="url(#mask0)">
+                        <path
+                            d="M9.19024 145.964C34.0253 76.5814 114.865 54.7299 184.111 29.4823C245.804 6.98884 311.86 -14.9503 370.735 14.143C431.207 44.026 467.948 107.508 477.191 174.311C485.897 237.229 454.931 294.377 416.506 344.954C373.74 401.245 326.068 462.801 255.442 466.189C179.416 469.835 111.552 422.137 65.1576 361.805C17.4835 299.81 -17.1617 219.583 9.19024 145.964Z" />
+                        <image class="home__blob-img" x="50" y="60" href="assets/img/E.png" />
+                    </g>
+                </svg>
+            </div>
+        </section>
+
+        <!--===== ABOUT =====-->
+        <section class="about section " id="about">
+            <h2 class="section-title">About</h2>
+
+            <div class="about__container bd-grid">
+                <div class="about__img">
+                    <img src="assets/img/i.png" alt="">
+                </div>
+
+                <div>
+                    <h2 class="about__subtitle">I'am ABUDULSALAM</h2>
+                    <p class="about__text">a passionate Full Stack Developer and Data Analyst with
+                        hands-on experience in building dynamic web apps and driving data-driven decision-making.
+                        Frontend: HTML5, CSS3, JavaScript, React.js, Bootstrap, Tailwind
+                        Backend: Node.js, Express.js, MongoDB, RESTful APIs
+                        Data Tools: Python, Pandas, NumPy, SQL, Matplotlib, Power BI
+                        Machine Learning: scikit-learn, regression/classification models, data preprocessing
+                        Develop dynamic, responsive web apps
+                        Analyze complex data sets and visualize trends
+                        Train and deploy predictive models for business outcomes
+                        Automate tasks and streamline operations using Python
+                        I enjoy solving real-world problems with clean code, smart visuals, and meaningful insights.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!--===== SKILLS =====-->
+        <section class="skills section" id="skills">
+            <h2 class="section-title">Skills</h2>
+
+            <div class="skills__container bd-grid">
+                <div>
+                    <h2 class="skills__subtitle">Profesional Skills</h2>
+                    <p class="skills__text">Detail-oriented and motivated Web Developer hands-on experience in REACT,
+                        including custom themes and plugin integration. Strong foundation in HTML5, CSS3, and
+                        JavaScript, with a keen eye for responsive design and usability. Adept at transforming design
+                        mockups into functional, high-performance websites.</p>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <span
+                                style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center;">
+                                <img src="assets/img/c-.png" class="pentagon" height="75px" width="75px"
+                                    alt="C-- Language Icon">
+                                <img src="assets/img/c.png" class="pentagon" height="75px" width="75px"
+                                    alt="C Language Icon">
+                                <img src="assets/img/c-sharp.png" class="pentagon" height="75px" width="75px"
+                                    alt="C Language Icon">
+                                <img src="assets/img/java.png" class="pentagon" height="75px" width="75px"
+                                    alt="Java Language Icon">
+                                <img src="assets/img/r.png" class="pentagon" height="75px" width="75px"
+                                    alt="R Language Icon">
+
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="skills__bar skills__html">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <span
+                                style="display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center;">
+                                <img src="assets/img/atom.png" height="75px" width="75px" alt="Atom Icon">
+                                <img src="assets/img/programing.png" height="75px" width="75px" alt="Programming Icon">
+                                <img src="assets/img/sql-server.png" height="75px" width="75px" alt="SQL Server Icon">
+                                <img src="assets/img/php.png" height="75px" width="75px" alt="PHP Language Icon">
+                                <img src="assets/img/python.png" height="75px" width="75px" alt="Python Language Icon">
+
+                            </span>
+                            </span>
+                        </div>
+                        <div class="skills__bar skills__html">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+
+                            <span class="skills__name"><strong><i>HTML5, CSS3, JAVASCRIPT,
+                                        TYPESCRIPT</i></strong></span>
+                        </div>
+                        <div class="skills__bar skills__html">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">95%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <!-- <i class='bx bxl-css3 skills__icon'></i> -->
+                            <span class="skills__name"><strong><i>WEB DEVELOPMENT: React.js, Bootstrap, Node.js,
+                                        TAILWIND CSS,
+                                        Express.js, RESTful APIs, Responsive Design</i></strong></span>
+                        </div>
+                        <div class="skills__bar skills__css">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <span class="skills__name"><strong><i>Data Science & Machine Learning:
+                                        Pandas, NumPy, Matplotlib, scikit-learn, Data Analysis, Data Visualization,
+                                        Machine Learning</i></strong></span>
+                        </div>
+                        <div class="skills__bar skills__js">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">65%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <span class="skills__name"><strong><i>Data Visualization: Power BI, Tableau,
+                                        IBM SPSS, IBM COGNOS ANALYTICS, GOOGLE LOOKER</i></strong></span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <span class="skills__name"><strong><i>Data BASES: MYSQL, SQL,
+                                        POSTGRESQL,</i></strong></span>
+                        </div>
+                        <div class="skills__bar skills__ux">
+
+                        </div>
+                        <div>
+                            <span class="skills__percentage">85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="assets/img/u.avif" alt="" class="skills__img">
+                    <br>
+                    <img src="assets/img/s.avif" alt="" class="skills__img">
+                    <br>
+                    <img src="assets/img/t.avif" alt="" class="skills__img">
+                </div>
+            </div>
+        </section>
+        <!--===== CERTIFICATES=====-->
+        <section class="work section" id="work">
+            <h2 class="section-title"><strong><i>Certificates</i></strong></h2>
+
+            <div class="work__container bd-grid">
+                <a href="" class="work__img">
+                    <img src="assets/img/1.png" onclick="openCoursera2()" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/2.png" onclick="openCoursera1()" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/3.png" onclick="openCoursera3()" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/4.png" onclick="openCoursera4()" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/8.png" onclick="openCoursera5()" alt="">
+                </a>
+                <a href="" class="work__img">
+                    <img src="assets/img/6.png" onclick="openCoursera6()" alt="">
+                </a>
+            </div>
+        </section>
+        <!--===== projects =====-->
+        <section id="section2" class="section">
+        </section>
+        <section class="work section" id="work">
+            <h2 class="section-title"><strong><i>Projects</i></strong></h2>
+
+            <div>
+                <div class="work__container bd-grid" style="
+    display: flex;
+    flex-wrap: nowrap; /* Keeps items in one row */
+    justify-content: center; /* Centers items horizontally within this container */
+    gap: 20px; /* Adds space between the items */
+    align-items: flex-start; /* Aligns items to the start of the cross-axis (top) */
+    padding: 20px; /* Add some padding around the container */
+    max-width: 960px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container itself on the page */
+    background-color: rgba(0, 0, 0, 0.1); /* Optional: subtle background to see the container boundaries */
+    border-radius: 10px; /* Optional: rounded corners for the container */
+">
+                    <a href="" class="work__img"
+                        style="text-decoration: none; color: inherit; display: block; width: 200px; /* Example fixed width for each item */">
+                        <img src="assets/img/n.jpg" alt="Netflix Clone Project Image"
+                            style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                        <p style="text-align: center; margin-top: 10px;"><strong><i>A CLONE OF NETFLIX</i></strong></p>
+                    </a>
+                    <a href="" class="work__img"
+                        style="text-decoration: none; color: inherit; display: block; width: 200px; /* Example fixed width for each item */">
+                        <img src="assets/img/p.jpg" alt="Custom Portfolio Project Image"
+                            style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                        <p style="text-align: center; margin-top: 10px;"><strong><i>CREATED A CUSTOM
+                                    Portfolio</i></strong></p>
+                    </a>
+                    <a href="" class="work__img"
+                        style="text-decoration: none; color: inherit; display: block; width: 200px; /* Example fixed width for each item */">
+                        <img src="assets/img/s.jpg" alt="Spotify Clone Project Image"
+                            style="max-width: 100%; height: auto; display: block; border-radius: 8px;">
+                        <p style="text-align: center; margin-top: 10px;"><strong><i>CREATED A CLONE OF
+                                    SPOTIFY</i></strong></p>
+                    </a>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!--===== CONTACT =====-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="mail" placeholder="Email" class="contact__input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="button" value="SEND" class="contact__button button">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">ABDULSALAM</p>
+        <div class="footer__social">
+            <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
+        </div>
+        <p class="footer__copy">&#169; Bedimcode. All rigths reserved</p>
+    </footer>
+
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="assets/js/main.js"></script>
+    <script>
+
+        function openCoursera1() {
+            // Define the URL for Coursera
+            const courseraUrl = 'https://www.coursera.org/account/accomplishments/specialization/LUAPGO2F0U89';
+
+            // Open the URL in a new tab/window
+            // The second argument '_blank' ensures it opens in a new tab.
+            window.open(courseraUrl, '_blank');
+        }
+        function openCoursera2() {
+            // Define the URL for Coursera
+            const courseraUrl = 'https://www.coursera.org/account/accomplishments/professional-cert/CU5XTUFBXR0N';
+
+            // Open the URL in a new tab/window
+            // The second argument '_blank' ensures it opens in a new tab.
+            window.open(courseraUrl, '_blank');
+        }
+        function openCoursera3() {
+            // Define the URL for Coursera
+            const courseraUrl = 'https://www.coursera.org/account/accomplishments/specialization/153EGFOX6GAX';
+
+            // Open the URL in a new tab/window
+            // The second argument '_blank' ensures it opens in a new tab.
+            window.open(courseraUrl, '_blank');
+        }
+        function openCoursera4() {
+            // Define the URL for Coursera
+            const courseraUrl = 'https://www.coursera.org/account/accomplishments/professional-cert/N3HW88F3YYUZ';
+
+            // Open the URL in a new tab/window
+            // The second argument '_blank' ensures it opens in a new tab.
+            window.open(courseraUrl, '_blank');
+        }
+        function openCoursera5() {
+            // Define the URL for Coursera
+            const courseraUrl = 'https://www.coursera.org/account/accomplishments/specialization/KOCRAJG0YP33';
+
+            // Open the URL in a new tab/window
+            // The second argument '_blank' ensures it opens in a new tab.
+            window.open(courseraUrl, '_blank');
+        }
+        function openCoursera6() {
+            // Define the URL for Coursera
+            const courseraUrl = 'https://www.coursera.org/account/accomplishments/specialization/88R9XOY9FVU1';
+
+            // Open the URL in a new tab/window
+            // The second argument '_blank' ensures it opens in a new tab.
+            window.open(courseraUrl, '_blank');
+        }
+    </script>
+    <script>
+        /**
+         * @function scrollToSection
+         * @description Smoothly scrolls the page to the target section.
+         * @param {Event} event - The click event object.
+         * @param {string} sectionId - The ID of the target section (e.g., 'home-section').
+         */
+        function scrollToSection(event, sectionId) {
+            event.preventDefault(); // Prevent the default jump behavior of the anchor link
+
+            const targetElement = document.getElementById(sectionId);
+
+            if (targetElement) {
+                // Use scrollIntoView for smooth scrolling
+                targetElement.scrollIntoView({
+                    behavior: 'smooth', // Makes the scroll animated
+                    block: 'start'       // Aligns the top of the element with the top of the viewport
+                });
+
+                // Optional: For Bootstrap's scrollspy to work correctly with smooth scroll,
+                // you might need to manually update the URL hash after scrolling.
+                // This line is commented out as it might interfere with Bootstrap's scrollspy
+                // but can be useful if scrollspy isn't behaving as expected.
+                // history.pushState(null, null, `#${sectionId}`);
+            }
+        }
+
+        // --- Mobile Navbar Toggle (if using Bootstrap's collapse or custom JS) ---
+        const navToggle = document.getElementById('nav-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav__link');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('show');
+            });
+        }
+
+        // Close menu when a nav link is clicked (for mobile)
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (navMenu.classList.contains('show')) {
+                    navMenu.classList.remove('show');
+                }
+            });
+        });
+    </script>
+    <script>
+        /**
+         * @function scrollToSection
+         * @description Smoothly scrolls the page to the target section.
+         * @param {Event} event - The click event object.
+         * @param {string} sectionId - The ID of the target section (e.g., 'home-section').
+         */
+        function scrollToSection(event, sectionId) {
+            // Prevent the default jump behavior of the anchor link
+            event.preventDefault();
+
+            // Get a reference to the target HTML element using its ID
+            const targetElement = document.getElementById(sectionId);
+
+            // Check if the target element exists on the page
+            if (targetElement) {
+                // Use scrollIntoView for smooth scrolling
+                // 'behavior: smooth' makes the scroll animated
+                // 'block: start' aligns the top of the element with the top of the viewport
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+
+                // Optional: Update the URL hash without causing a jump.
+                // This can be useful for bookmarking or back/forward button functionality.
+                // history.pushState(null, null, `#${sectionId}`);
+            } else {
+                // Log an error if the target section is not found, useful for debugging
+                console.error(`Target section with ID '${sectionId}' not found.`);
+            }
+        }
+    </script>
+</body>
+
+</html>
